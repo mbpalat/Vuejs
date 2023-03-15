@@ -1,0 +1,34 @@
+#bag{
+    width  : 200px;
+    height : 500px;
+    margin : 0 auto ;
+    background : url('../Images/bag.png') center no-repeat;
+    background-size: 80%;
+}
+
+
+#bagimg{
+    width  : 200px;
+    height : 500px;
+    margin : 0 auto ;
+    background : url('../Images/bag-burst.png') center no-repeat;
+    background-size: 80%;
+}
+
+
+#bag-health{
+    width  : 200px;
+    border : 2px solid #000 ;
+    margin : 0 auto 20px auto;
+}
+
+#healthbar{
+    height : 20px;
+    width : 100%;
+    background-color : crimson;
+}
+
+#controls{
+    width : 130px;
+    margin : 0 auto;
+}

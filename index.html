@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js</title>
+    <link href="styles.css" rel="stylesheet" />
+
+    <script src="app.js"></script>
+</head>
+<body>
+    <div id="vue-app">
+        <h1>[[ greet('david') ]]</h1>
+        <p>[[name]]</p>
+        <p>[[job]]</p>
+        <a v-bind:href="website">Google Site</a>
+        <input type="text" v-bind:value = "name" />
+        <p v-html="websitetag"></p>
+
+        <button v-on:click="age++">Add A Year</button>
+        <button v-on:click="age--">Subtract A Year</button>
+
+        <button v-on:click="add(10)">Add A Year</button>
+        <button v-on:click="subtract(10)">Subtract A Year</button>
+
+        <button v-on:click="updateXY()">Subtract A Year</button>
+
+        <p>My age is [[age]]</p>
+        <div id="canvas" style="background-color: coral; border : 2px solid black; height : 50px;" v-on:mousemove="updateXY">[[x]],[[y]]</div>
+
+        <a v-on:click="click" href="https://www.google.com"></a>
+
+        <label> Name </label>
+        <input type="text" v-on:keyup="logName" />
+        <label> Age </label>
+        <input type="text" v-on:keyup="logAge" />
+
+
+    </div>
+   
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+<script>
+
+    new Vue({
+    el   : '#vue-app',
+    delimiters: ['[[', ']]'],
+    data : {
+        name    : 'David',
+        job     : 'Ninja',
+        website : 'https://www.google.com',
+        websitetag : '<a href="https://www.google.com">Google Site</a>',
+        age     : 25,
+        x       : 0,
+        y       : 0,
+    },
+    methods : {
+        greet : function(time){
+                return "Good Morning" + time + this.job;
+        },
+        add : function(inc){
+                this.age += inc;
+        },
+        subtract : function(dec){
+                this.age -= dec ;
+        },
+        updateXY : function(event){
+            this.x = event.offsetX;
+            this.y = event.offsetY;            
+        },
+        logName  : function(){
+            console.log("You entered your name");
+        },
+        logAge  : function(){
+            console.log("You entered your age");
+        },
+        
+
+    }
+});
+</script>
+</body>
+</html>
+
+

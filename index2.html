@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js</title>
+    <link href="styles.css" rel="stylesheet" />
+
+    <script src="app.js"></script>
+</head>
+<body>
+    <div id="vue-app">
+        <h2>KeyBoard Events</h2>
+        <label> Name </label>
+        <input type="text" v-on:keyup.enter="logName" />
+       
+        <label> Age </label>
+        <input type="text" v-on:keyup.enter="logAge" />
+
+        <h2>2 - way Data Binding</h2>
+        <label> Name </label>
+        <input type="text" v-model="name" />
+       
+        <label> Age </label>
+        <input type="text" v-model="age" />
+        
+        <span>[[ name ]]</span>
+        <span>[[ age ]]</span>
+
+        <h2>Computed Properties</h2>
+<!--    <label> Age </label>
+        <input type="text" v-model="ag" />  -->
+        <button v-on:click="a++">Add A</button>
+        <button v-on:click="b++">Add B</button>
+        <button v-on:click="AddToA">Add Age To A</button>
+        <button v-on:click="AddToB">Add Age To B</button>
+        <p>A - [[a]]</p>
+        <p>B - [[b]]</p>
+        <p>A Add Age - [[ AddToA() ]]</p>
+        <p>B Add Age - [[ AddToB() ]]</p>
+        
+
+    </div>
+   
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+<script>
+    new Vue({
+    el   : '#vue-app',
+    delimiters: ['[[', ']]'],
+    data : {
+        name : '',
+        age  : '',
+
+        ag   : 2,
+        a    : 0,
+        b    : 0,
+    },
+    methods : {
+        logName  : function(){
+            console.log("You entered your name");
+        },
+        logAge  : function(){
+            console.log("You entered your age");
+        },
+        AddToA  : function(){
+            return (this.a + this.ag) ;
+        }, 
+        AddToB  : function(){
+            return (this.b + this.ag) ;
+        }
+    }
+});
+</script>
+</body>
+</html>
+
+
