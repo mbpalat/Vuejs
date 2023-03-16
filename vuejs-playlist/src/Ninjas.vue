@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li v-for="ninja in ninjas" >{{ ninja }}</li>
+    <li v-for="ninja in ninjas">{{ ninja }}</li>
   </ul>
 
 </template>

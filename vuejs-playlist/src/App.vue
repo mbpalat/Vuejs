@@ -3,17 +3,28 @@
     <h1>{{title}}</h1> 
     <p>{{ greeting() }}</p>
     <ninjas></ninjas>
+    <app-header></app-header>
+    <app-footer></app-footer> 
+    <ninja-1></ninja-1> 
   
 
   </div> 
 </template>
 
 <script>
+import Footer from './components/Footer.vue';
+import Header from './components/Header.vue';
+import Ninja1 from './components/Ninja1.vue';
 import Ninjas from './Ninjas.vue';
+
 
 export default {
   components: {
-      'ninjas' : Ninjas
+      'ninjas'      : Ninjas,
+      'app-header'  : Header,
+       'app-footer' : Footer,
+       'ninja-1'      : Ninja1,
+    Ninja1,
     },
   data () {
     return {
@@ -28,6 +39,7 @@ export default {
 }
 </script>
 
+<!-- 
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -55,4 +67,4 @@ li {
 a {
   color: #42b983;
 }
-</style>
+</style> -->
