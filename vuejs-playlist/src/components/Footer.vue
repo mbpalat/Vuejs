@@ -7,6 +7,9 @@
    </template>
    
    <script>
+
+import { bus } from '../main';
+
    export default {
      data () {
        return {
@@ -15,7 +18,10 @@
        }
      },
      methods :{
-      
+      created(){
+        bus.$on("updateTitle", (data) => {
+            this.title = data ;
+        })
      }
    }
    </script>

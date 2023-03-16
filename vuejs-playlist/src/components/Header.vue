@@ -8,6 +8,9 @@
   </template>
   
   <script>
+
+import { bus } from '../main';
+
   export default {
     data () {
       return {
@@ -21,6 +24,10 @@
         },
         changeTitle : function(){
             this.$emit('changeTitle','Vuewizards');
+        }
+        updateTitle : function(){
+            this.title = "Change wizards";
+            bus.$emit('updateTitle','VueH1wizards');
         }
     }
   }
