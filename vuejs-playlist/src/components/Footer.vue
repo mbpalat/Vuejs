@@ -23,7 +23,8 @@ import { bus } from '../main';
             this.title = data ;
         })
      }
-   }
+   },
+}
    </script>
 
    <style scoped>

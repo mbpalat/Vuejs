@@ -24,7 +24,7 @@ import { bus } from '../main';
         },
         changeTitle : function(){
             this.$emit('changeTitle','Vuewizards');
-        }
+        },
         updateTitle : function(){
             this.title = "Change wizards";
             bus.$emit('updateTitle','VueH1wizards');
