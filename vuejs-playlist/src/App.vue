@@ -3,7 +3,8 @@
     <h1>{{title}}</h1> 
     <p>{{ greeting() }}</p>
     <ninjas></ninjas>
-    <app-header v-on:changeTitle="updateTitle($event)"></app-header>
+    <app-header v-on:changeTitle="updateTitle($event)" 
+    v-on:updateTitle="updateTitle($event)"></app-header>
     <app-footer v-bind:title="title"></app-footer> 
     <ninja-1 ninjas="1234"></ninja-1> 
   
