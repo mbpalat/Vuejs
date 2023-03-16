@@ -1,5 +1,9 @@
 <template>
    <div  >
+
+    <postget></postget>
+    <!-- 
+    <dynamic-form></dynamic-form>
     <h1>{{title}}</h1> 
     <p>{{ greeting() }}</p>
     <ninjas></ninjas>
@@ -12,26 +16,32 @@
         <p>I am the form Header</p>
       </div>
     </formhelper>
+   -->
   
+
 
   </div> 
 </template>
 
 <script>
+import DynamicForm from './components/DynamicForm.vue';
 import Footer from './components/Footer.vue';
 import FormHelper from './components/FormHelper.vue';
 import Header from './components/Header.vue';
 import Ninja1 from './components/Ninja1.vue';
+import PostGet from './components/PostGet.vue';
 import Ninjas from './Ninjas.vue';
 
 
 export default {
   components: {
-      'ninjas'      : Ninjas,
-      'app-header'  : Header,
-       'app-footer' : Footer,
-       'ninja-1'    : Ninja1,
-       'formhelper' : FormHelper,
+      'ninjas'        : Ninjas,
+      'app-header'    : Header,
+       'app-footer'   : Footer,
+       'ninja-1'      : Ninja1,
+       'formhelper'   : FormHelper,
+       'dynamic-form' : DynamicForm,
+       'postget'     : PostGet,
     },
   data () {
     return {
