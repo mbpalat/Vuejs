@@ -1,0 +1,28 @@
+install VueCli
+-->
+npm install -g vue-cli
+
+vue init webpack-simple vuejs-playlist
+
+Few Questions
+
+? Project name vuejs-playlist
+? Project description A Vue.js project
+? Author Mithun B Palat <mithunbpalat1993@gmail.com>
+? License MIT
+? Use sass? No
+
+   vue-cli · Generated "vuejs-playlist".
+
+   To get started:
+
+     cd vuejs-playlist
+     npm install
+     npm run dev
+
+
+cd vuejs-playlist 
+
+npm install
+
+
