@@ -1,6 +1,8 @@
 <template>
    <div>
-     <h1>{{ header }}</h1>
+     <h1 v-on:click="changeTitle">{{ header }}</h1>
+     <h1 v-on:click="change">{{ header }}</h1>
+     <h1>{{ title }}</h1>
    </div>
   
   </template>
@@ -9,11 +11,17 @@
   export default {
     data () {
       return {
-        header : 'Header'
+        header : 'Header',
+        title  : 'title',
       }
     },
     methods :{
-     
+        change(){
+            this.title = "Cahnged title";
+        },
+        changeTitle : function(){
+            this.$emit('changeTitle','Vuewizards');
+        }
     }
   }
   </script>

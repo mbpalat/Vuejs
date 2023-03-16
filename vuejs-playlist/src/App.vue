@@ -3,9 +3,9 @@
     <h1>{{title}}</h1> 
     <p>{{ greeting() }}</p>
     <ninjas></ninjas>
-    <app-header></app-header>
-    <app-footer></app-footer> 
-    <ninja-1></ninja-1> 
+    <app-header v-on:changeTitle="updateTitle($event)"></app-header>
+    <app-footer v-bind:title="title"></app-footer> 
+    <ninja-1 ninjas="1234"></ninja-1> 
   
 
   </div> 
@@ -34,6 +34,9 @@ export default {
   methods :{
     greeting : function(){
       return "Hello Vue Js"
+    },
+    updateTitle: function(uptitle){
+      this.title = uptitle;
     }
   }
 }

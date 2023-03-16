@@ -1,6 +1,7 @@
 <template>
     <footer>
       <p>{{ copyright }}</p>
+      <p>{{ title }}</p>
     </footer>
    
    </template>
@@ -9,7 +10,8 @@
    export default {
      data () {
        return {
-        copyright : 'CopyRight 2017'
+        copyright : 'CopyRight 2017',
+        title     : 'footer'
        }
      },
      methods :{
@@ -20,8 +22,8 @@
 
    <style scoped>
    footer{
-     background : #222;
+     background : white;
      padding    : 6px;
-     color      : white;
+     color      : black;
    }
    </style>
