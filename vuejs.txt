@@ -25,4 +25,6 @@ cd vuejs-playlist
 
 npm install
 
+npm run dev
+
 
